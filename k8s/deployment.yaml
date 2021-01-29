@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.18-alpine-perl
+        image: nginx:1.18-perl
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -32,7 +32,7 @@ spec:
           mountPath: /etc/nginx/conf.d/default.conf
           subPath: nginx.conf
       - name: flask
-        image: jdk2588/gitops:develop-v0.0.1
+        image: jdk2588/gitops:develop-v0.0.2
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
